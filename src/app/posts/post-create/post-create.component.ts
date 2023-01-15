@@ -1,4 +1,8 @@
-import { Component } from "@angular/core";
+import { Component} from "@angular/core";
+import { NgForm } from "@angular/forms";
+
+import { Post } from "../post.model";
+import { PostsService } from "../posts.service";
 
 @Component({
   selector: 'app-post-create',
@@ -6,10 +10,17 @@ import { Component } from "@angular/core";
   styleUrls: ['./post-create.component.css']
 })
 export class PostCreateComponent{
-  newPost = 'Replace this value';
-  enteredValue = '';
+  enteredTitle = '';
+  enteredContent = '';
 
-  onSavePost(){
-    this.newPost = this.enteredValue;
+  constructor(public postsService: PostsService) {}
+
+  onSavePost(form: NgForm){
+    if (!form.valid){
+      return;
+    }
+
+    this.postsService.addPost(form.value.title, form.value.content);
+    form.resetForm()
   }
 }
