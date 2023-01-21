@@ -13,14 +13,9 @@
       <img [src]="imagePreview" [alt]="form.value.title">
     </div>
     <mat-form-field>
-      <textarea matInput rows="6" formControlName="content" placeholder="Post Content" ></textarea>
-      <mat-error *ngIf="form.get('content').invalid">Please enter a post content.</mat-error>
+      <textarea matInput rows="4" formControlName="content" placeholder="Post Content"></textarea>
+      <mat-error *ngIf="form.get('content').invalid">Please enter a post title.</mat-error>
     </mat-form-field>
-
-    <button mat-raised-button color="primary" type="submit">Save Post</button>
+    <button mat-raised-button color="accent" type="submit">Save Post</button>
   </form>
-
 </mat-card>
-
-
-
