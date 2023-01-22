@@ -3,12 +3,12 @@ textarea {
   width: 100%;
 }
 
-button {
-  width: 200px;
-}
-
 mat-spinner {
   margin: auto;
+}
+
+button {
+  width: 200px;
 }
 
 input[type="file"] {
