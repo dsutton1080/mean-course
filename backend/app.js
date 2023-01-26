@@ -12,7 +12,7 @@ mongoose.set("strictQuery", false);
 
 mongoose
   .connect(
-    "mongodb+srv://dsutton1080:dsuttonAdmin@cluster0.bms6bfv.mongodb.net/?retryWrites=true&w=majority"
+    "mongodb+srv://dsutton1080:" + process.env.MONGO_ATLAS_PW + "@cluster0.bms6bfv.mongodb.net/?retryWrites=true&w=majority"
   )
   .then(() => {
     console.log("Connected to database!");
