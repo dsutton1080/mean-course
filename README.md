@@ -1,6 +1,7 @@
 # MeanCourse
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.5.
+There are two versions of this app under two different branches: two-app-setup and one-app-setup. 
 
 ## Development server
 
